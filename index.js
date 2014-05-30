@@ -1,21 +1,16 @@
-var ss = require('simple-statistics')
 var explode = require('turf-explode')
 var point = require('turf-point')
 
 module.exports = function(features){
-  var vertices = explode(features)
-  var averageX, 
-      averageY, 
-      xs = [], 
-      ys = []
-    
-  vertices.features.forEach(function(v){
-    xs.push(v.geometry.coordinates[0])
-    ys.push(v.geometry.coordinates[1])
-  })
+  var vertices = explode(features).features,
+    xSum = 0,
+    ySum = 0,
+    len = vertices.length
 
-  averageX = ss.mean(xs)
-  averageY = ss.mean(ys)
+  for (var i = 0; i < len; i++) {
+    xSum += vertices[i].geometry.coordinates[0]
+    ySum += vertices[i].geometry.coordinates[1]
+  }
 
-  return point(averageX, averageY)
+  return point(xSum / len, ySum / len)
 }
