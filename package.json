@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/morganherlocker/turf-centroid",
   "devDependencies": {
-    "tape": "^2.12.3"
+    "tape": "^2.13.3"
   },
   "dependencies": {
-    "simple-statistics": "^0.8.0",
-    "turf-explode": "^0.1.1",
-    "turf-point": "^0.1.0"
+    "simple-statistics": "^0.8.1",
+    "turf-explode": "^0.1.2",
+    "turf-point": "^0.1.1"
   }
 }
