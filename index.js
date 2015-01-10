@@ -11,8 +11,12 @@ var point = require('turf-point');
  * @param {FeatureCollection} fc a {@link Feature} or FeatureCollection of any type
  * @return {Point} a Point showing the centroid of the input feature(s)
  * @example
- * var poly = turf.polygon([[[0,0], [0,10], [10,10] , [10,0]]])
- * var centroidPt = turf.centroid(poly)
+ * var poly = turf.polygon([[[0,0], [0,10], [10,10] , [10,0], [0, 0]]]);
+ * var centroidPt = turf.centroid(poly);
+ *
+ * var result = turf.featurecollection([poly, centroidPt]);
+ *
+ * //=result
  */
 module.exports = function(features){
   var vertices = explode(features).features,
