@@ -8,8 +8,8 @@ var point = require('turf-point');
  * the centroid of a set of polygons.
  *
  * @module turf/centroid
- * @param {GeoJSON} input
- * @return {Point} output
+ * @param {FeatureCollection} fc a {@link Feature} or FeatureCollection of any type
+ * @return {Point} a Point showing the centroid of the input feature(s)
  * @example
  * var poly = turf.polygon([[[0,0], [0,10], [10,10] , [10,0]]])
  * var centroidPt = turf.centroid(poly)
