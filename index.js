@@ -1,4 +1,4 @@
-var explode = require('turf-explode');
+var each = require('turf-meta').coordEach;
 var point = require('turf-point');
 
 /**
@@ -26,15 +26,9 @@ var point = require('turf-point');
  * //=result
  */
 module.exports = function(features){
-  var vertices = explode(features).features,
-    xSum = 0,
-    ySum = 0,
-    len = vertices.length;
-
-  for (var i = 0; i < len; i++) {
-    xSum += vertices[i].geometry.coordinates[0];
-    ySum += vertices[i].geometry.coordinates[1];
-  }
-
-  return point(xSum / len, ySum / len);
+  var xSum = 0, ySum = 0, len = 0;
+  each(features, function(coord) {
+    xSum += coord[0]; ySum += coord[1]; len++;
+  });
+  return point([xSum / len, ySum / len]);
 };

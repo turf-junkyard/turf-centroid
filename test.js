@@ -6,7 +6,7 @@ test('center', function(t){
   var centered = center(fc);
 
   t.ok(centered, 'should return the proper center for a FeatureCollection');
-  t.deepEqual(centered.geometry.coordinates, [84.4, 0.4]);
+  t.deepEqual(centered.geometry.coordinates, [96.3, -0.25]);
 
   t.end();
 });

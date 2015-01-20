@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "simple-statistics": "^0.9.0",
-    "turf-explode": "^1.0.0",
+    "turf-meta": "^1.0.1",
     "turf-point": "^1.2.0"
   }
 }
