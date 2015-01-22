@@ -1,36 +1,53 @@
-turf-centroid
-=============
-[![Build Status](https://travis-ci.org/Turfjs/turf-centroid.svg)](https://travis-ci.org/Turfjs/turf-centroid)
+# turf-centroid
 
-Calculates the centroid of a polygon Feature or FeatureCollection using the geometric mean of all vertices. This lessens the effect of small islands and artifacts when calculating the centroid of a set of polygons.
+[![build status](https://secure.travis-ci.org/Turfjs/turf-centroid.png)](http://travis-ci.org/Turfjs/turf-centroid)
 
-###Install
+turf centroid module
 
-```sh
-npm install turf-centroid
-```
 
-###Parameters
+### `turf.centroid(fc)`
 
-|name|description|
-|---|---|
-|fc|A Feature or FeatureCollection of any type|
+Takes a Feature or FeatureCollection of any type and calculates the centroid using the geometric mean of all vertices.
+This lessens the effect of small islands and artifacts when calculating
+the centroid of a set of polygons.
 
-###Usage
+
+### Parameters
+
+| parameter | type              | description                                |
+| --------- | ----------------- | ------------------------------------------ |
+| `fc`      | FeatureCollection | a Feature or FeatureCollection of any type |
+
+
+### Example
 
 ```js
-centroid(fc)
+var poly = turf.polygon([[
+	[105.818939,21.004714],
+	[105.818939,21.061754],
+	[105.890007,21.061754],
+	[105.890007,21.004714],
+	[105.818939,21.004714]
+]]);
+
+var centroidPt = turf.centroid(poly);
+
+var result = turf.featurecollection([poly, centroidPt]);
+
+//=result
 ```
 
-###Example
+## Installation
 
-```javascript
-var centroid = require('turf-centroid')
-var polygon = require('turf-polygon')
+Requires [nodejs](http://nodejs.org/).
 
-var poly = polygon([[[0,0], [0,10], [10,10] , [10,0]]])
-
-var centroidPt = centroid(poly)
-
-console.log(centroidPt) // a point at 5, 5
+```sh
+$ npm install turf-centroid
 ```
+
+## Tests
+
+```sh
+$ npm test
+```
+
