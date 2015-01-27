@@ -2,7 +2,7 @@ var each = require('turf-meta').coordEach;
 var point = require('turf-point');
 
 /**
- * Takes a {@link Feature} or {@link FeatureCollection} of any type and calculates the centroid using the geometric mean of all vertices.
+ * Takes a {@link Feature} or {@link FeatureCollection} of any type and calculates the centroid using the arithmetic mean of all vertices.
  * This lessens the effect of small islands and artifacts when calculating
  * the centroid of a set of polygons.
  *
@@ -27,7 +27,9 @@ var point = require('turf-point');
 module.exports = function(features){
   var xSum = 0, ySum = 0, len = 0;
   each(features, function(coord) {
-    xSum += coord[0]; ySum += coord[1]; len++;
+    xSum += coord[0];
+    ySum += coord[1];
+    len++;
   });
   return point([xSum / len, ySum / len]);
 };

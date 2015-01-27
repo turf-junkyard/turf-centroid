@@ -7,7 +7,7 @@ turf centroid module
 
 ### `turf.centroid(fc)`
 
-Takes a Feature or FeatureCollection of any type and calculates the centroid using the geometric mean of all vertices.
+Takes a Feature or FeatureCollection of any type and calculates the centroid using the arithmetic mean of all vertices.
 This lessens the effect of small islands and artifacts when calculating
 the centroid of a set of polygons.
 
