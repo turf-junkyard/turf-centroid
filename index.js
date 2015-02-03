@@ -10,17 +10,27 @@ var point = require('turf-point');
  * @param {FeatureCollection} fc a {@link Feature} or FeatureCollection of any type
  * @return {Point} a Point feature at the centroid of the input feature(s)
  * @example
- * var poly = turf.polygon([[
- * 	[105.818939,21.004714],
- * 	[105.818939,21.061754],
- * 	[105.890007,21.061754],
- * 	[105.890007,21.004714],
- * 	[105.818939,21.004714]
- * ]]);
+ * var poly = {
+ *   "type": "Feature",
+ *   "properties": {},
+ *   "geometry": {
+ *     "type": "Polygon",
+ *     "coordinates": [[
+ *       [105.818939,21.004714],
+ *       [105.818939,21.061754],
+ *       [105.890007,21.061754],
+ *       [105.890007,21.004714],
+ *       [105.818939,21.004714]
+ *     ]]
+ *   }
+ * };
  *
  * var centroidPt = turf.centroid(poly);
  *
- * var result = turf.featurecollection([poly, centroidPt]);
+ * var result = {
+ *   "type": "FeatureCollection",
+ *   "features": [poly, centroidPt]
+ * };
  *
  * //=result
  */
