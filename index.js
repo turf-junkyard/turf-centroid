@@ -7,6 +7,7 @@ var point = require('turf-point');
  * the centroid of a set of polygons.
  *
  * @module turf/centroid
+ * @category measurement
  * @param {FeatureCollection} fc a {@link Feature} or FeatureCollection of any type
  * @return {Point} a Point feature at the centroid of the input feature(s)
  * @example
