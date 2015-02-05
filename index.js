@@ -8,7 +8,7 @@ var point = require('turf-point');
  *
  * @module turf/centroid
  * @category measurement
- * @param {FeatureCollection} fc a {@link Feature} or FeatureCollection of any type
+ * @param {GeoJSON} features a {@link Feature} or FeatureCollection of any type
  * @return {Point} a Point feature at the centroid of the input feature(s)
  * @example
  * var poly = {
