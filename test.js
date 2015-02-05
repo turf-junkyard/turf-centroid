@@ -6,11 +6,13 @@ var boxFC = JSON.parse(fs.readFileSync(__dirname+'/fixtures/in/box.geojson'));
 var blockFC = JSON.parse(fs.readFileSync(__dirname+'/fixtures/in/block.geojson'));
 
 test('centroid', function(t){
-  var boxFcCenter = center(boxFC);
+  var boxFcCenter = center(boxFC.features[0]);
+  boxFcCenter.properties['marker-color'] = '#f0f';
   t.ok(boxFcCenter, 'should return the proper center for a FeatureCollection');
   t.deepEqual(boxFcCenter.geometry.coordinates, [65.56640625, 43.59448261855401]);
 
   var blockFcCenter = center(blockFC.features[0]);
+  blockFcCenter.properties['marker-color'] = '#f0f';
   t.ok(blockFcCenter, 'should return the proper center for a FeatureCollection');
   t.deepEqual(blockFcCenter.geometry.coordinates, [-114.02900261988646,51.05007001220118]);
 

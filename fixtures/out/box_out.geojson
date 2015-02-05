@@ -41,7 +41,9 @@
           43.59448261855401
         ]
       },
-      "properties": {}
+      "properties": {
+        "marker-color": "#f0f"
+      }
     }
   ]
 }

@@ -2092,7 +2092,9 @@
           51.05007001220118
         ]
       },
-      "properties": {}
+      "properties": {
+        "marker-color": "#f0f"
+      }
     }
   ]
 }
