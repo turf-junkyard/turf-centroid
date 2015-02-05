@@ -5,7 +5,7 @@ var fs = require('fs');
 var boxFC = JSON.parse(fs.readFileSync(__dirname+'/fixtures/in/box.geojson'));
 var blockFC = JSON.parse(fs.readFileSync(__dirname+'/fixtures/in/block.geojson'));
 
-test('center', function(t){
+test('centroid', function(t){
   var boxFcCenter = center(boxFC);
   t.ok(boxFcCenter, 'should return the proper center for a FeatureCollection');
   t.deepEqual(boxFcCenter.geometry.coordinates, [65.56640625, 43.59448261855401]);
