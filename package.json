@@ -30,7 +30,7 @@
     "doxme": "^1.4.3"
   },
   "dependencies": {
-    "geojson-fixtures": "^0.4.0",
+    "geojson-fixtures": "^0.5.0",
     "turf-meta": "^1.0.2",
     "turf-point": "^2.0.0"
   }
