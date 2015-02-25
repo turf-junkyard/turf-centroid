@@ -2,14 +2,14 @@ var each = require('turf-meta').coordEach;
 var point = require('turf-point');
 
 /**
- * Takes a {@link Feature} or {@link FeatureCollection} of any type and calculates the centroid using the arithmetic mean of all vertices.
+ * Takes features and calculates the centroid using the arithmetic mean of all vertices.
  * This lessens the effect of small islands and artifacts when calculating
  * the centroid of a set of polygons.
  *
  * @module turf/centroid
  * @category measurement
- * @param {GeoJSON} features a {@link Feature} or FeatureCollection of any type
- * @return {Point} a Point feature at the centroid of the input feature(s)
+ * @param {(Feature<(Point|LineString|Polygon)>|FeatureCollection<(Point|LineString|Polygon)>)} features input features
+ * @return {Feature<Point>} the centroid of the input features
  * @example
  * var poly = {
  *   "type": "Feature",
