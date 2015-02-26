@@ -8,7 +8,7 @@ var point = require('turf-point');
  *
  * @module turf/centroid
  * @category measurement
- * @param {(Feature<(Point|LineString|Polygon)>|FeatureCollection<(Point|LineString|Polygon)>)} features input features
+ * @param {(Feature|FeatureCollection)} features input features
  * @return {Feature<Point>} the centroid of the input features
  * @example
  * var poly = {
