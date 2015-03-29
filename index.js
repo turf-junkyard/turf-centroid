@@ -35,7 +35,7 @@ var point = require('turf-point');
  *
  * //=result
  */
-module.exports = function(features){
+module.exports = function(features) {
   var xSum = 0, ySum = 0, len = 0;
   each(features, function(coord) {
     xSum += coord[0];
